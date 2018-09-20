@@ -1,0 +1,12 @@
+<head>
+  <title>New Posts</title>
+</head>
+<h1>New Posts</h1>
+
+<body>
+  <%= form_for(@post) do |f| %>
+    <%= f.text_area :content, placeholder: "Compose new post" %>
+
+    <%= f.submit "Post" %>
+  <% end %>
+</body>

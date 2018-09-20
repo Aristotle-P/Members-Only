@@ -1,0 +1,16 @@
+<head>
+  <title>Sign In</title>
+</head>
+<h1>Sign In</h1>
+
+<div><%= flash[:danger] %></div>
+
+<%= form_for(:session, url: login_path) do |f| %>
+  <%= f.label :email %>
+  <%= f.email_field :email %>
+  <br>
+  <%= f.label :password %>
+  <%= f.password_field :password %>
+
+  <%= f.submit "Sign in" %>
+<% end %>

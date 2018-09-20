@@ -1,0 +1,9 @@
+<head>
+  <title>Posts</title>
+</head>
+<h1>Posts</h1>
+
+<% @list.each do |post| %>
+  <%= list_user(post.user_id) if logged_in?%>
+  <%= post.content %>
+<% end %>
